@@ -1,13 +1,13 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-// next ticket will change the p's to Link
+
   return (
     <div id="navbar">      
-      <p>Home</p>
-      <p>Login</p>
-      <p>Register</p>
-      <p>Post</p>
+      <Link to="/">Home</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/register">Register</Link>
+      <Link to="/post">Post</Link>
     </div>
   )
 }
