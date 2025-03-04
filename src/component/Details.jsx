@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 const Details = () => {
   const {id} = useParams();
   const [item, setItem] = useState(null);
+  const [numItems, setNumItems] = useState(0);
 
   useEffect(() => {
     const getItem = async(id) => {
@@ -19,6 +20,10 @@ const Details = () => {
 
   }, [])
 
+  const buyButton = () => {
+    console.log('Item purchased')
+  }
+
   return (
     <>
       <h1>Details</h1>
@@ -31,6 +36,8 @@ const Details = () => {
           <h3>{item.quantity} in stock</h3>
           <img src={item.img_url} style={{height: '20vh'}}></img>
           <h3>Located in {item.location}</h3>
+          <button onClick={buyButton}>Buy {numItems}</button>
+          <input type="range" min="0" max={item.quantity} onChange={(event)=>{setNumItems(event.target.value)}}></input>
         </div>
         :
         <></>
