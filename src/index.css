@@ -1,3 +1,45 @@
 body {
-  background-color: lightblue;
+  background-color: #EED59C;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form > button {
+  width: 65px;
+}
+form > label {
+  color:#319C73;
+  font-variant: small-caps;
+  padding: 5px;
+}
+h1 {
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #319C73;
+  font-variant: small-caps;
+  
+}
+h2 {
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #319C73;
+  font-variant: small-caps;
+}
+#navbar {
+ background-color: #BD9462;
+ padding: 10px;
+ display: flex;
+ box-shadow: 0 0 12px -2px black;
+ justify-content: space-around;
+ 
+}
+
+#navbar > a {
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+body{
+  align-items: center;
 }
