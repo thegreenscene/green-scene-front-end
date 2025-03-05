@@ -9,7 +9,6 @@ const Home = () => {
     const getItems = async() => {
       const response = await fetch('https://green-scene.onrender.com/api/items');
       const jsonObj = await response.json();
-      console.log(jsonObj);
       setItems(jsonObj)
     }
 
