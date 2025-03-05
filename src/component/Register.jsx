@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+const navigate = useNavigate();
 const [userNameInput, setUserNameInput] = useState('');
 const [passwordInput, setPasswordInput] = useState('');
 const [locationInput, setLocationInput] = useState('');
@@ -19,6 +21,12 @@ const [locationInput, setLocationInput] = useState('');
         location: locationInput
       })
     });
+    const tokenObject = await createResponse.json();
+    
+    if(tokenObject.token){
+      localStorage.setItem('token', tokenObject.token);
+      navigate('/');
+    }
   }
   return (
     <>

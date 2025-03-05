@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 //displays a Login form
 const Login = () => { 
+  const navigate = useNavigate();
   const [inputUser, setInputUser] = useState('');
   const [inputPass, setInputPass] = useState('');
 
@@ -22,6 +24,7 @@ const loginAttempt = async (event) => {
   
   if(tokenObject.token){
     localStorage.setItem('token', tokenObject.token);
+    navigate('/');
   }
 }
 
